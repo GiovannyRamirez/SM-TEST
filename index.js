@@ -84,9 +84,12 @@ return pal;
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
-let sum=resultadosTest.reduce((previous, current)=>current+=previous);
-let prom=sum/(resultadosTest.length);
-return prom;
+
+var suma=0;
+for (var i= 0; i<resultadosTest.length; i++) {
+  suma+=resultadosTest[i];
+}
+return suma/resultadosTest.length;
 }
 
 function esPrimo(numero) {
